@@ -1,5 +1,6 @@
 # wondel-auto-router
 
+[![validate](https://github.com/carloslimaborges/wondel-auto-router/actions/workflows/validate.yml/badge.svg)](https://github.com/carloslimaborges/wondel-auto-router/actions/workflows/validate.yml)
 [![Version](https://img.shields.io/badge/version-1.1.0-blue)](https://github.com/carloslimaborges/wondel-auto-router/releases)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](https://github.com/carloslimaborges/wondel-auto-router/pulls)
