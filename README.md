@@ -32,16 +32,27 @@ Prerequisite — the wondel.ai library:
 npx skills add wondelai/skills --all --global
 ```
 
-Then this router:
+Then this router, via one of:
+
+### Claude Code plugin marketplace (recommended)
+
+```
+/plugin marketplace add carloslimaborges/wondel-auto-router
+/plugin install wondel-auto-router@wondel-auto-router
+```
+
+### skills.sh (Claude Code, Cursor, Codex, and other agentskills.io agents)
 
 ```bash
-# Claude Code
-git clone https://github.com/carloslimaborges/wondel-auto-router ~/.claude/skills/wondel-auto-router-tmp \
-  && mv ~/.claude/skills/wondel-auto-router-tmp/wondel-auto-router ~/.claude/skills/ \
-  && rm -rf ~/.claude/skills/wondel-auto-router-tmp
+npx skills add carloslimaborges/wondel-auto-router --global
+```
 
-# Google Antigravity — same skill, different folder
-cp -r ~/.claude/skills/wondel-auto-router ~/.agents/skills/
+### Manual (Google Antigravity or any agent)
+
+```bash
+git clone https://github.com/carloslimaborges/wondel-auto-router /tmp/war \
+  && cp -r /tmp/war/wondel-auto-router ~/.agents/skills/   # Antigravity
+  # for Claude Code use ~/.claude/skills/ instead
 ```
 
 No configuration. The router activates on its own whenever a task matches.
