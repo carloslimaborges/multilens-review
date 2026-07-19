@@ -8,13 +8,13 @@
   },
   "metadata": {
     "description": "Meta-skill that auto-routes any task to the right wondel.ai framework skills — with a mandatory 11-lens multifocal baseline for engineering work",
-    "version": "1.0.0"
+    "version": "1.1.0"
   },
   "plugins": [
     {
       "name": "wondel-auto-router",
       "description": "Routing layer for the wondel.ai skills library: classifies every task and loads the matching skills automatically. Engineering tasks get a mandatory 11-skill multifocal baseline (Clean Code, Pragmatic Programmer, Refactoring, Legacy Code, Software Design, Release It!, DDIA, High Perf Browser, UX Heuristics, Microinteractions, Steve Jobs Design Review) plus context-specific additions for greenfield, iOS, and visual work.",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "author": {
         "name": "Carlos Borges",
         "url": "https://github.com/carloslimaborges"
