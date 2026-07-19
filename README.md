@@ -6,6 +6,8 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](https://github.com/carloslimaborges/wondel-auto-router/pulls)
 [![Compatibility](https://img.shields.io/badge/works%20with-Claude%20Code%20%7C%20Antigravity%20%7C%20Cursor%20%7C%20Codex-8A2BE2)](#install)
 
+**English** | [Português (BR)](README-pt.md)
+
 **A meta-skill that turns any AI coding agent into a multifocal expert reviewer — automatically.**
 
 Compatible with Claude Code, Claude Cowork, Google Antigravity, Cursor, Codex, and any [agentskills.io](https://agentskills.io)-compatible agent.
