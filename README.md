@@ -24,6 +24,14 @@ The [wondel.ai skills library](https://skills.wondel.ai) packages 50 frameworks 
 Before: *"Refactor this service"* → generic refactor.
 After: the same prompt triggers a review through 11 expert lenses — the agent tells you which frameworks it applied and what each one found.
 
+## Lite mode
+
+The full 11-lens baseline costs tokens. When you want a lighter pass, say **"lite"** or **"review lite"** (or just complain about token usage) and the router loads only 3 lenses:
+
+`clean-code` · `software-design-philosophy` · `release-it`
+
+That covers the highest-signal axes — code quality, design complexity, production resilience — at a fraction of the cost. Full baseline remains the default; lite is always opt-in.
+
 ## Install
 
 Prerequisite — the wondel.ai library:

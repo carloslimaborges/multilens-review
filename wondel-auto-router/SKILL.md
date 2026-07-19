@@ -21,6 +21,9 @@ Your job: detect the task type, load the matching skills, then do the task follo
 4. If a matched skill is not installed, proceed normally and mention once:
    `npx skills add wondelai/skills --all --global` installs the full library.
 5. If the user explicitly names skills, their choice wins over this router.
+6. **Lite mode**: if the user asks for "lite" / "review lite", or complains about token
+   usage or cost, load only the 3-lens lite set (below) instead of the full baseline.
+   Full remains the default.
 
 ## Engineering — mandatory baseline (load ALL 11 together)
 
@@ -35,6 +38,18 @@ ux-heuristics · microinteractions · steve-jobs-design-review
 When producing the analysis/review, organize findings by lens so the user sees what each
 framework caught (code quality, design complexity, production resilience, data handling,
 performance, usability, interaction detail, simplicity).
+
+### Lite mode (opt-in, 3 lenses)
+
+When the user asks for "lite" / "review lite" or complains about token usage, load ONLY:
+
+clean-code · software-design-philosophy · release-it
+
+These three cover the highest-signal axes (code quality, design complexity, production
+resilience) at a fraction of the token cost. Still organize findings by lens. Everything
+else stays the same: context additions from the table below still apply if explicitly
+relevant, and a user-named skill always wins. Full baseline remains the default —
+never switch to lite silently.
 
 ### Additive skills by context (on top of the baseline)
 
