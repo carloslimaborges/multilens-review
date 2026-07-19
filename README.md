@@ -1,5 +1,10 @@
 # wondel-auto-router
 
+[![Version](https://img.shields.io/badge/version-1.1.0-blue)](https://github.com/carloslimaborges/wondel-auto-router/releases)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](https://github.com/carloslimaborges/wondel-auto-router/pulls)
+[![Compatibility](https://img.shields.io/badge/works%20with-Claude%20Code%20%7C%20Antigravity%20%7C%20Cursor%20%7C%20Codex-8A2BE2)](#install)
+
 **A meta-skill that turns any AI coding agent into a multifocal expert reviewer — automatically.**
 
 Compatible with Claude Code, Claude Cowork, Google Antigravity, Cursor, Codex, and any [agentskills.io](https://agentskills.io)-compatible agent.
