@@ -1,27 +1,27 @@
-# wondel-auto-router
+# multilens-review
 
-[![validate](https://github.com/carloslimaborges/wondel-auto-router/actions/workflows/validate.yml/badge.svg)](https://github.com/carloslimaborges/wondel-auto-router/actions/workflows/validate.yml)
-[![Version](https://img.shields.io/badge/version-1.1.0-blue)](https://github.com/carloslimaborges/wondel-auto-router/releases)
+[![validate](https://github.com/carloslimaborges/multilens-review/actions/workflows/validate.yml/badge.svg)](https://github.com/carloslimaborges/multilens-review/actions/workflows/validate.yml)
+[![Version](https://img.shields.io/badge/version-1.1.0-blue)](https://github.com/carloslimaborges/multilens-review/releases)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](https://github.com/carloslimaborges/wondel-auto-router/pulls)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](https://github.com/carloslimaborges/multilens-review/pulls)
 [![Compatibility](https://img.shields.io/badge/works%20with-Claude%20Code%20%7C%20Antigravity%20%7C%20Cursor%20%7C%20Codex-8A2BE2)](#install)
 
 **English** | [Português (BR)](README-pt.md)
 
-**A meta-skill that turns any AI coding agent into a multifocal expert reviewer — automatically.**
+**A meta-skill that turns any AI coding agent into a multifocal expert reviewer, automatically.**
 
 Compatible with Claude Code, Claude Cowork, Google Antigravity, Cursor, Codex, and any [agentskills.io](https://agentskills.io)-compatible agent.
 
 ## The problem
 
-The [wondel.ai skills library](https://skills.wondel.ai) packages 50 frameworks from bestselling engineering and business books (Clean Code, DDIA, Release It!, Refactoring, A Philosophy of Software Design...) as agent skills. But you have to remember to invoke them, by name, on every prompt. Nobody does that consistently — so most of the library's value evaporates.
+The [wondel.ai skills library](https://skills.wondel.ai) packages 50 frameworks from bestselling engineering and business books (Clean Code, DDIA, Release It!, Refactoring, A Philosophy of Software Design...) as agent skills. But you have to remember to invoke them, by name, on every prompt. Nobody does that consistently, so most of the library's value evaporates.
 
 ## The solution
 
-`wondel-auto-router` is a routing layer. Install it once and the agent:
+`multilens-review` is a routing layer. Install it once and the agent:
 
 1. **Classifies every task** (engineering, UX, marketing, product, strategy, ops)
-2. **Loads the right skills before working** — no manual invocation
+2. **Loads the right skills before working**, no manual invocation
 3. **For engineering tasks, applies a mandatory 11-lens baseline simultaneously**, producing a multifocal review instead of a single-framework answer:
 
    `clean-code` · `pragmatic-programmer` · `refactoring-patterns` · `working-with-legacy-code` · `software-design-philosophy` · `release-it` · `ddia-systems` · `high-perf-browser` · `ux-heuristics` · `microinteractions` · `steve-jobs-design-review`
@@ -30,7 +30,7 @@ The [wondel.ai skills library](https://skills.wondel.ai) packages 50 frameworks 
 5. **Organizes findings by lens**, so you see what each framework caught: code quality, design complexity, production resilience, data handling, performance, usability, interaction detail, simplicity
 
 Before: *"Refactor this service"* → generic refactor.
-After: the same prompt triggers a review through 11 expert lenses — the agent tells you which frameworks it applied and what each one found.
+After: the same prompt triggers a review through 11 expert lenses, the agent tells you which frameworks it applied and what each one found.
 
 ## Lite mode
 
@@ -38,11 +38,11 @@ The full 11-lens baseline costs tokens. When you want a lighter pass, say **"lit
 
 `clean-code` · `software-design-philosophy` · `release-it`
 
-That covers the highest-signal axes — code quality, design complexity, production resilience — at a fraction of the cost. Full baseline remains the default; lite is always opt-in.
+That covers the highest-signal axes, code quality, design complexity, production resilience, at a fraction of the cost. Full baseline remains the default; lite is always opt-in.
 
 ## Install
 
-Prerequisite — the wondel.ai library:
+Prerequisite, the wondel.ai library:
 
 ```bash
 npx skills add wondelai/skills --all --global
@@ -53,21 +53,21 @@ Then this router, via one of:
 ### Claude Code plugin marketplace (recommended)
 
 ```
-/plugin marketplace add carloslimaborges/wondel-auto-router
-/plugin install wondel-auto-router@wondel-auto-router
+/plugin marketplace add carloslimaborges/multilens-review
+/plugin install multilens-review@multilens-review
 ```
 
 ### skills.sh (Claude Code, Cursor, Codex, and other agentskills.io agents)
 
 ```bash
-npx skills add carloslimaborges/wondel-auto-router --global
+npx skills add carloslimaborges/multilens-review --global
 ```
 
 ### Manual (Google Antigravity or any agent)
 
 ```bash
-git clone https://github.com/carloslimaborges/wondel-auto-router /tmp/war \
-  && cp -r /tmp/war/wondel-auto-router ~/.agents/skills/   # Antigravity
+git clone https://github.com/carloslimaborges/multilens-review /tmp/war \
+  && cp -r /tmp/war/multilens-review ~/.agents/skills/   # Antigravity
   # for Claude Code use ~/.claude/skills/ instead
 ```
 
@@ -75,7 +75,7 @@ No configuration. The router activates on its own whenever a task matches.
 
 ## How it works
 
-Agent skills are progressive-disclosure prompts: the agent always sees each skill's name + description, and loads the full body only when relevant. This router exploits that mechanism — its description is written to trigger on any engineering/product/marketing task, and its body is a routing table that instructs the agent which wondel.ai skills to load next. A skill that loads skills.
+Agent skills are progressive-disclosure prompts: the agent always sees each skill's name + description, and loads the full body only when relevant. This router exploits that mechanism, its description is written to trigger on any engineering/product/marketing task, and its body is a routing table that instructs the agent which wondel.ai skills to load next. A skill that loads skills.
 
 ## Design decisions
 
@@ -86,6 +86,6 @@ Agent skills are progressive-disclosure prompts: the agent always sees each skil
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT, see [LICENSE](LICENSE).
 
 Built on top of the excellent [wondelai/skills](https://github.com/wondelai/skills) library (also MIT).
